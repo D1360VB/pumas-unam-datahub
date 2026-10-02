@@ -38,13 +38,18 @@ def load_and_transform(filepath):
     """Lee el CSV procesado y añade columnas derivadas."""
     df = pd.read_csv(filepath, encoding="utf-8")
 
-    # Parsear fecha
-    df["Date"] = pd.to_datetime(df["Date"], format=DATE_FORMAT, errors="coerce")
+    # Parseo flexible de fecha (acepta ISO y DD/MM/YYYY)
+    df["Date"] = pd.to_datetime(df["Date"], errors="coerce")
+
+    # Verificar que no haya fechas inválidas
+    nulos = df["Date"].isna().sum()
+    if nulos > 0:
+        print(f"⚠️  {nulos} fechas inválidas encontradas; se eliminarán.")
+        df = df.dropna(subset=["Date"]).reset_index(drop=True)
 
     # Columnas derivadas desde la perspectiva de Pumas
     es_local = df["Home"] == "UNAM Pumas"
 
-    # Resultado: W (ganó), D (empató), L (perdió)
     goles_pumas = df["HG"].where(es_local, df["AG"])
     goles_rival = df["AG"].where(es_local, df["HG"])
     df["pumas_goals"] = goles_pumas
@@ -58,18 +63,17 @@ def load_and_transform(filepath):
         goles_pumas == goles_rival,
         goles_pumas < goles_rival,
     ]
-    df["result"] = "L"  # default
+    df["result"] = "L"
     df.loc[condiciones[0], "result"] = "W"
     df.loc[condiciones[1], "result"] = "D"
 
     # Puntos (3/1/0)
-    puntos_map = {"W": 3, "D": 1, "L": 0}
-    df["points"] = df["result"].map(puntos_map)
+    df["points"] = df["result"].map({"W": 3, "D": 1, "L": 0})
 
     # Diferencia de goles
     df["goal_diff"] = df["pumas_goals"] - df["rival_goals"]
 
-    # ID único del partido: fecha + local + visitante
+    # ID único del partido
     df["match_id"] = (
         df["Date"].dt.strftime("%Y%m%d")
         + "_"
@@ -124,6 +128,10 @@ def save_to_sqlite(df, db_path):
 
     # Convertir fecha a string ISO para SQLite
     filas["date"] = filas["date"].dt.strftime("%Y-%m-%d")
+    
+    # Verificar que no queden None
+    assert filas["date"].notna().all(), "Hay fechas nulas después del parseo"
+    assert filas["match_id"].notna().all(), "Hay match_id nulos"
 
     registros = filas.values.tolist()
     cursor.executemany("""
