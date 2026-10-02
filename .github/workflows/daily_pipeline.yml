@@ -1,0 +1,40 @@
+name: Daily Pumas Data Pipeline
+
+on:
+  schedule:
+    - cron: "0 14 * * *"   # 14:00 UTC = 8:00 AM CDMX
+  workflow_dispatch:        # Permite ejecución manual desde GitHub
+
+permissions:
+  contents: write
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Fetch raw data
+        run: python scraper/fetch_data.py
+
+      - name: Run ETL (CSV → SQLite)
+        run: python scraper/etl.py
+
+      - name: Export JSON for website
+        run: python scraper/export_json.py
+
+      - name: Commit changes if any
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git diff --staged --quiet || git commit -m "data: actualización diaria $(date -u +%F)"
+          git push

@@ -1,0 +1,152 @@
+[
+  {
+    "season": "2026/2027",
+    "partidos": 10,
+    "puntos": 12,
+    "goles_favor": 14,
+    "goles_contra": 16,
+    "ganados": 0,
+    "empatados": 3,
+    "perdidos": 0
+  },
+  {
+    "season": "2025/2026",
+    "partidos": 41,
+    "puntos": 63,
+    "goles_favor": 67,
+    "goles_contra": 54,
+    "ganados": 0,
+    "empatados": 15,
+    "perdidos": 0
+  },
+  {
+    "season": "2024/2025",
+    "partidos": 38,
+    "puntos": 53,
+    "goles_favor": 48,
+    "goles_contra": 48,
+    "ganados": 0,
+    "empatados": 8,
+    "perdidos": 0
+  },
+  {
+    "season": "2023/2024",
+    "partidos": 41,
+    "puntos": 61,
+    "goles_favor": 60,
+    "goles_contra": 47,
+    "ganados": 0,
+    "empatados": 13,
+    "perdidos": 0
+  },
+  {
+    "season": "2022/2023",
+    "partidos": 34,
+    "puntos": 32,
+    "goles_favor": 45,
+    "goles_contra": 63,
+    "ganados": 0,
+    "empatados": 11,
+    "perdidos": 0
+  },
+  {
+    "season": "2021/2022",
+    "partidos": 40,
+    "puntos": 53,
+    "goles_favor": 48,
+    "goles_contra": 51,
+    "ganados": 0,
+    "empatados": 11,
+    "perdidos": 0
+  },
+  {
+    "season": "2020/2021",
+    "partidos": 40,
+    "puntos": 58,
+    "goles_favor": 45,
+    "goles_contra": 36,
+    "ganados": 0,
+    "empatados": 16,
+    "perdidos": 0
+  },
+  {
+    "season": "2019/2020",
+    "partidos": 28,
+    "puntos": 38,
+    "goles_favor": 41,
+    "goles_contra": 39,
+    "ganados": 0,
+    "empatados": 8,
+    "perdidos": 0
+  },
+  {
+    "season": "2018/2019",
+    "partidos": 38,
+    "puntos": 51,
+    "goles_favor": 54,
+    "goles_contra": 55,
+    "ganados": 0,
+    "empatados": 12,
+    "perdidos": 0
+  },
+  {
+    "season": "2017/2018",
+    "partidos": 36,
+    "puntos": 37,
+    "goles_favor": 40,
+    "goles_contra": 55,
+    "ganados": 0,
+    "empatados": 10,
+    "perdidos": 0
+  },
+  {
+    "season": "2016/2017",
+    "partidos": 36,
+    "puntos": 46,
+    "goles_favor": 51,
+    "goles_contra": 59,
+    "ganados": 0,
+    "empatados": 7,
+    "perdidos": 0
+  },
+  {
+    "season": "2015/2016",
+    "partidos": 40,
+    "puntos": 66,
+    "goles_favor": 68,
+    "goles_contra": 51,
+    "ganados": 0,
+    "empatados": 9,
+    "perdidos": 0
+  },
+  {
+    "season": "2014/2015",
+    "partidos": 36,
+    "puntos": 49,
+    "goles_favor": 47,
+    "goles_contra": 48,
+    "ganados": 0,
+    "empatados": 10,
+    "perdidos": 0
+  },
+  {
+    "season": "2013/2014",
+    "partidos": 36,
+    "puntos": 37,
+    "goles_favor": 37,
+    "goles_contra": 46,
+    "ganados": 0,
+    "empatados": 13,
+    "perdidos": 0
+  },
+  {
+    "season": "2012/2013",
+    "partidos": 36,
+    "puntos": 52,
+    "goles_favor": 38,
+    "goles_contra": 40,
+    "ganados": 0,
+    "empatados": 7,
+    "perdidos": 0
+  }
+]
