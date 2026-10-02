@@ -3,11 +3,12 @@
 Scraper de datos de Pumas UNAM desde football-data.co.uk.
 
 Descarga el CSV de la Liga MX, filtra los partidos donde participa
-UNAM Pumas y guarda el resultado en data/raw/.
+UNAM Pumas y guarda el resultado en data/processed/.
 
 Formato del CSV (football-data.co.uk/new/MEX.csv):
     Country, League, Season, Date, Time, Home, Away, HG, AG, Res, ...
 Encoding: UTF-8 con BOM (utf-8-sig)
+Formato de fecha: DD/MM/YYYY
 """
 
 import os
@@ -20,6 +21,7 @@ from datetime import datetime
 MEX_CSV_URL = "https://www.football-data.co.uk/new/MEX.csv"
 CSV_ENCODING = "utf-8-sig"
 PUMAS_NAME = "UNAM Pumas"
+DATE_FORMAT = "%d/%m/%Y"
 
 # --- Rutas ---
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -51,18 +53,9 @@ def download_mex_csv():
 
 
 def filter_pumas_data(filepath):
-    """
-    Lee el CSV y filtra solo los partidos donde participa UNAM Pumas.
-
-    Args:
-        filepath: ruta al CSV crudo.
-
-    Returns:
-        DataFrame con los partidos de Pumas.
-    """
+    """Lee el CSV y filtra solo los partidos donde participa UNAM Pumas."""
     df = pd.read_csv(filepath, encoding=CSV_ENCODING)
 
-    # Verificar columnas esperadas (falla temprano si el formato cambió)
     columnas_necesarias = ["Date", "Season", "Home", "Away", "HG", "AG", "Res"]
     faltantes = [c for c in columnas_necesarias if c not in df.columns]
     if faltantes:
@@ -71,9 +64,12 @@ def filter_pumas_data(filepath):
             f"Disponibles: {df.columns.tolist()}"
         )
 
+    # Parsear fechas (DD/MM/YYYY)
+    df["Date"] = pd.to_datetime(df["Date"], format=DATE_FORMAT, errors="coerce")
+
     # Filtrar partidos de Pumas (local o visitante)
     pumas_mask = (df["Home"] == PUMAS_NAME) | (df["Away"] == PUMAS_NAME)
-    pumas_df = df[pumas_mask].copy()
+    pumas_df = df[pumas_mask].copy().sort_values("Date").reset_index(drop=True)
 
     print(f"📊 Partidos de Pumas encontrados: {len(pumas_df)}")
     return pumas_df
@@ -83,7 +79,6 @@ def save_processed(pumas_df, source_filepath):
     """Guarda el DataFrame filtrado como CSV procesado."""
     os.makedirs(PROCESSED_DIR, exist_ok=True)
 
-    # Nombre basado en el archivo fuente
     base = os.path.basename(source_filepath).replace(".csv", "")
     out_path = os.path.join(PROCESSED_DIR, f"pumas_{base}.csv")
 
@@ -100,7 +95,6 @@ def main():
         print("⚠️  No se encontraron partidos de Pumas en el CSV.")
         return
 
-    # Guardar versión procesada
     save_processed(pumas_df, csv_path)
 
     # --- Resumen por consola ---
@@ -111,11 +105,11 @@ def main():
     print("\n--- Partidos por temporada ---")
     print(pumas_df["Season"].value_counts().sort_index().to_string())
 
-    # Estadísticas rápidas
     print("\n--- Resumen ---")
     print(f"Total de partidos: {len(pumas_df)}")
     print(f"Temporadas cubiertas: {pumas_df['Season'].nunique()}")
-    print(f"Rango de fechas: {pumas_df['Date'].min()} → {pumas_df['Date'].max()}")
+    print(f"Rango de fechas: {pumas_df['Date'].min().strftime(DATE_FORMAT)} → "
+          f"{pumas_df['Date'].max().strftime(DATE_FORMAT)}")
 
 
 if __name__ == "__main__":
