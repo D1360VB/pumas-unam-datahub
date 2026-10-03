@@ -113,10 +113,10 @@ def save_to_sqlite(df, db_path):
 
     # UPSERT: INSERT OR REPLACE por match_id
     filas = df[[
-        "match_id", "Date", "Season", "League",
-        "Home", "Away", "HG", "AG", "Res",
-        "pumas_goals", "rival_goals", "rival",
-        "is_home", "points", "goal_diff",
+    "match_id", "Date", "Season", "League",
+    "Home", "Away", "HG", "AG", "result",    # ← usar "result" (minúscula), no "Res"
+    "pumas_goals", "rival_goals", "rival",
+    "is_home", "points", "goal_diff",
     ]].copy()
 
     filas.columns = [

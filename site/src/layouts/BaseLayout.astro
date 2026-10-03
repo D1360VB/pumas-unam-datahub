@@ -1,0 +1,65 @@
+---
+const { title = "Pumas UNAM Datahub" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <style>
+    :root {
+      --azul: #003087;
+      --oro: #FDB913;
+      --gris: #f5f5f5;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background: #fff;
+    }
+    header {
+      background: var(--azul);
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    header a { color: #fff; text-decoration: none; font-weight: 600; }
+    header a:hover { color: var(--oro); }
+    nav { display: flex; gap: 1.5rem; margin-left: auto; }
+    main { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
+    h1, h2 { color: var(--azul); margin-bottom: 1rem; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+    th, td { padding: 0.5rem 0.75rem; text-align: left; border-bottom: 1px solid #ddd; }
+    th { background: var(--azul); color: #fff; }
+    tr:nth-child(even) { background: var(--gris); }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #888;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href={import.meta.env.BASE_URL + "/"}>🐆 Pumas Datahub</a>
+    <nav>
+      <a href={import.meta.env.BASE_URL + "/partidos"}>Partidos</a>
+      <a href={import.meta.env.BASE_URL + "/temporadas"}>Temporadas</a>
+      <a href={import.meta.env.BASE_URL + "/rivales"}>Rivales</a>
+    </nav>
+  </header>
+  <main>
+    <slot />
+  </main>
+  <footer>
+    Datos abiertos de Pumas UNAM · Liga MX
+  </footer>
+</body>
+</html>

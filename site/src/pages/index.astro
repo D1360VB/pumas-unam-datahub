@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import metadata from '../../public/data/metadata.json';
+---
+
+<BaseLayout title="Inicio">
+  <h1>Pumas UNAM Datahub</h1>
+  <p>Dataset abierto con datos históricos del Club Universidad Nacional.</p>
+  <ul>
+    <li><strong>{metadata.total_matches}</strong> partidos registrados</li>
+    <li><strong>{metadata.seasons_covered}</strong> temporadas cubiertas</li>
+    <li>Última actualización: {new Date(metadata.last_updated).toLocaleDateString('es-MX')}</li>
+  </ul>
+</BaseLayout>

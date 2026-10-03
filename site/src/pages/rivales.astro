@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import rivals from '../../public/data/rivals.json';
+---
+
+<BaseLayout title="Rivales">
+  <h1>Estadísticas vs Rivales</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Rival</th>
+        <th>Partidos</th>
+        <th>Puntos</th>
+        <th>Ganados</th>
+        <th>Empatados</th>
+        <th>Perdidos</th>
+      </tr>
+    </thead>
+    <tbody>
+      {rivals.map((r) => (
+        <tr>
+          <td>{r.rival}</td>
+          <td>{r.partidos}</td>
+          <td>{r.puntos}</td>
+          <td>{r.ganados}</td>
+          <td>{r.empatados}</td>
+          <td>{r.perdidos}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</BaseLayout>

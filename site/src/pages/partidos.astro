@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import matches from '../../public/data/matches.json';
+
+const partidos = matches.slice(0, 100); // primeros 100
+---
+
+<BaseLayout title="Partidos">
+  <h1>Partidos de Pumas</h1>
+  <p>Mostrando los últimos {partidos.length} partidos.</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Fecha</th>
+        <th>Temporada</th>
+        <th>Local</th>
+        <th>Marcador</th>
+        <th>Visitante</th>
+        <th>Resultado</th>
+      </tr>
+    </thead>
+    <tbody>
+      {partidos.map((p) => (
+        <tr>
+          <td>{p.date}</td>
+          <td>{p.season}</td>
+          <td>{p.home_team}</td>
+          <td>{p.home_goals} - {p.away_goals}</td>
+          <td>{p.away_team}</td>
+          <td>{p.result}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</BaseLayout>

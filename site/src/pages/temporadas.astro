@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Temporadas">
+  <h1>Estadísticas por Temporada</h1>
+  <div style="position: relative; height: 400px; width: 100%;">
+    <canvas id="puntosChart"></canvas>
+  </div>
+
+  <script>
+    import Chart from 'chart.js/auto';
+
+    // Esperar a que el DOM esté listo
+    const canvas = document.getElementById('puntosChart');
+    if (!canvas) {
+      console.error('No se encontró el canvas #puntosChart');
+    } else {
+      const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+      fetch(`${base}/data/seasons.json`)
+        .then(r => {
+          if (!r.ok) throw new Error(`HTTP ${r.status}`);
+          return r.json();
+        })
+        .then(seasons => {
+          console.log('Temporadas cargadas:', seasons.length);
+          new Chart(canvas, {
+            type: 'bar',
+            data: {
+              labels: seasons.map(s => s.season),
+              datasets: [{
+                label: 'Puntos por temporada',
+                data: seasons.map(s => s.puntos),
+                backgroundColor: 'rgba(0, 48, 135, 0.7)',
+              }]
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              plugins: { legend: { display: false } },
+              scales: { y: { beginAtZero: true } }
+            }
+          });
+        })
+        .catch(err => console.error('Error al cargar seasons.json:', err));
+    }
+  </script>
+</BaseLayout>
