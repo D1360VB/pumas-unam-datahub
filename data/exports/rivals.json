@@ -1,192 +1,192 @@
 [
   {
     "rival": "Pachuca",
-    "partidos": 74,
-    "puntos": 100,
+    "partidos": 37,
+    "puntos": 50,
     "ganados": 0,
-    "empatados": 28,
+    "empatados": 14,
     "perdidos": 0
   },
   {
     "rival": "Puebla",
-    "partidos": 54,
-    "puntos": 92,
+    "partidos": 27,
+    "puntos": 46,
     "ganados": 0,
-    "empatados": 14,
+    "empatados": 7,
     "perdidos": 0
   },
   {
     "rival": "Club Leon",
-    "partidos": 62,
-    "puntos": 92,
+    "partidos": 31,
+    "puntos": 46,
     "ganados": 0,
-    "empatados": 14,
+    "empatados": 7,
     "perdidos": 0
   },
   {
     "rival": "Atlas",
-    "partidos": 60,
-    "puntos": 88,
+    "partidos": 30,
+    "puntos": 44,
     "ganados": 0,
-    "empatados": 34,
+    "empatados": 17,
     "perdidos": 0
   },
   {
     "rival": "Toluca",
-    "partidos": 60,
-    "puntos": 80,
+    "partidos": 30,
+    "puntos": 40,
     "ganados": 0,
-    "empatados": 14,
+    "empatados": 7,
     "perdidos": 0
   },
   {
     "rival": "Santos Laguna",
-    "partidos": 56,
-    "puntos": 80,
+    "partidos": 28,
+    "puntos": 40,
     "ganados": 0,
-    "empatados": 14,
+    "empatados": 7,
     "perdidos": 0
   },
   {
     "rival": "Queretaro",
-    "partidos": 56,
-    "puntos": 80,
+    "partidos": 28,
+    "puntos": 40,
     "ganados": 0,
-    "empatados": 14,
+    "empatados": 7,
     "perdidos": 0
   },
   {
     "rival": "Club America",
-    "partidos": 84,
-    "puntos": 80,
+    "partidos": 42,
+    "puntos": 40,
     "ganados": 0,
-    "empatados": 26,
+    "empatados": 13,
     "perdidos": 0
   },
   {
     "rival": "Club Tijuana",
-    "partidos": 56,
-    "puntos": 74,
+    "partidos": 28,
+    "puntos": 37,
     "ganados": 0,
-    "empatados": 14,
+    "empatados": 7,
     "perdidos": 0
   },
   {
     "rival": "Tigres UANL",
-    "partidos": 72,
-    "puntos": 70,
+    "partidos": 36,
+    "puntos": 35,
     "ganados": 0,
-    "empatados": 22,
+    "empatados": 11,
     "perdidos": 0
   },
   {
     "rival": "Cruz Azul",
-    "partidos": 66,
-    "puntos": 62,
+    "partidos": 33,
+    "puntos": 31,
     "ganados": 0,
-    "empatados": 20,
+    "empatados": 10,
     "perdidos": 0
   },
   {
     "rival": "Monterrey",
-    "partidos": 62,
-    "puntos": 60,
+    "partidos": 31,
+    "puntos": 30,
     "ganados": 0,
-    "empatados": 12,
+    "empatados": 6,
     "perdidos": 0
   },
   {
     "rival": "Guadalajara Chivas",
-    "partidos": 62,
-    "puntos": 60,
+    "partidos": 31,
+    "puntos": 30,
     "ganados": 0,
-    "empatados": 18,
+    "empatados": 9,
     "perdidos": 0
   },
   {
     "rival": "Atl. San Luis",
-    "partidos": 34,
-    "puntos": 60,
+    "partidos": 17,
+    "puntos": 30,
     "ganados": 0,
     "empatados": 0,
     "perdidos": 0
   },
   {
     "rival": "Necaxa",
-    "partidos": 40,
-    "puntos": 56,
+    "partidos": 20,
+    "puntos": 28,
     "ganados": 0,
-    "empatados": 14,
+    "empatados": 7,
     "perdidos": 0
   },
   {
     "rival": "Juarez",
-    "partidos": 32,
-    "puntos": 54,
+    "partidos": 16,
+    "puntos": 27,
     "ganados": 0,
-    "empatados": 12,
+    "empatados": 6,
     "perdidos": 0
   },
   {
     "rival": "Mazatlan FC",
-    "partidos": 24,
-    "puntos": 52,
+    "partidos": 12,
+    "puntos": 26,
     "ganados": 0,
-    "empatados": 10,
+    "empatados": 5,
     "perdidos": 0
   },
   {
     "rival": "Monarcas",
-    "partidos": 32,
-    "puntos": 44,
-    "ganados": 0,
-    "empatados": 8,
-    "perdidos": 0
-  },
-  {
-    "rival": "Veracruz",
-    "partidos": 30,
-    "puntos": 42,
-    "ganados": 0,
-    "empatados": 12,
-    "perdidos": 0
-  },
-  {
-    "rival": "Chiapas",
-    "partidos": 20,
-    "puntos": 40,
+    "partidos": 16,
+    "puntos": 22,
     "ganados": 0,
     "empatados": 4,
     "perdidos": 0
   },
   {
+    "rival": "Veracruz",
+    "partidos": 15,
+    "puntos": 21,
+    "ganados": 0,
+    "empatados": 6,
+    "perdidos": 0
+  },
+  {
+    "rival": "Chiapas",
+    "partidos": 10,
+    "puntos": 20,
+    "ganados": 0,
+    "empatados": 2,
+    "perdidos": 0
+  },
+  {
     "rival": "Atlante",
-    "partidos": 8,
-    "puntos": 18,
+    "partidos": 4,
+    "puntos": 9,
     "ganados": 0,
     "empatados": 0,
     "perdidos": 0
   },
   {
     "rival": "Lobos BUAP",
-    "partidos": 8,
-    "puntos": 14,
+    "partidos": 4,
+    "puntos": 7,
     "ganados": 0,
-    "empatados": 2,
+    "empatados": 1,
     "perdidos": 0
   },
   {
     "rival": "Dorados de Sinaloa",
-    "partidos": 4,
-    "puntos": 12,
+    "partidos": 2,
+    "puntos": 6,
     "ganados": 0,
     "empatados": 0,
     "perdidos": 0
   },
   {
     "rival": "Leones Negros",
-    "partidos": 4,
-    "puntos": 6,
+    "partidos": 2,
+    "puntos": 3,
     "ganados": 0,
     "empatados": 0,
     "perdidos": 0
