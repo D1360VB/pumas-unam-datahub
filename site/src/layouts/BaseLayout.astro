@@ -165,6 +165,104 @@ const { title = "Pumas UNAM Datahub" } = Astro.props;
         color: var(--text-secondary);
         font-size: 0.875rem;
       }
+            /* ============================================
+         RESPONSIVE — Tablet (≤ 1024px)
+         ============================================ */
+      @media (max-width: 1024px) {
+        header {
+          padding: 0.75rem 1rem;
+          gap: 1rem;
+        }
+        nav {
+          gap: 1rem;
+        }
+        main {
+          padding: 0 0.75rem;
+        }
+      }
+
+      /* ============================================
+         RESPONSIVE — Móvil (≤ 768px)
+         ============================================ */
+      @media (max-width: 768px) {
+        header {
+          padding: 0.75rem 1rem;
+          flex-wrap: wrap;
+          gap: 0.75rem;
+        }
+
+        /* El logo-link ocupa el ancho completo en la primera fila */
+        .logo-link {
+          flex: 1 1 100%;
+          justify-content: flex-start;
+        }
+        .logo {
+          width: 40px;
+          height: 40px;
+        }
+
+        /* El nav pasa a la segunda fila, ocupando todo el ancho */
+        nav {
+          flex: 1 1 auto;
+          margin-left: 0;
+          gap: 0.75rem;
+          justify-content: space-around;
+          order: 3;
+          flex-basis: 100%;
+          border-top: 1px solid rgba(255, 255, 255, 0.15);
+          padding-top: 0.75rem;
+        }
+        nav a {
+          font-size: 0.9rem;
+          padding: 0.25rem 0.5rem;
+        }
+
+        /* El botón de tema se mantiene a la derecha */
+        .theme-toggle {
+          width: 36px;
+          height: 36px;
+          font-size: 1rem;
+          margin-left: auto;
+        }
+
+        main {
+          padding: 0 0.75rem;
+          margin: 1.5rem auto;
+        }
+
+        h1 { font-size: 1.5rem; }
+        h2 { font-size: 1.25rem; }
+
+        /* Tablas: scroll horizontal en lugar de desbordarse */
+        .table-wrapper {
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+          margin: 1rem -0.75rem;   /* sale del padding del main */
+          padding: 0 0.75rem;
+        }
+        table {
+          min-width: 600px;        /* fuerza scroll en lugar de aplastar columnas */
+          font-size: 0.875rem;
+        }
+        th, td {
+          padding: 0.4rem 0.5rem;
+          white-space: nowrap;
+        }
+      }
+
+      /* ============================================
+         RESPONSIVE — Móvil pequeño (≤ 480px)
+         ============================================ */
+      @media (max-width: 480px) {
+        .logo-link span {
+          font-size: 1rem;
+        }
+        nav a {
+          font-size: 0.85rem;
+        }
+        h1 { font-size: 1.3rem; }
+        body { font-size: 0.95rem; }
+      }
     </style>
     <script is:inline>
       (function() {

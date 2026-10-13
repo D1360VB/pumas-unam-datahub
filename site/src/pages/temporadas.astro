@@ -4,7 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout title="Temporadas">
   <h1>Estadísticas por Temporada</h1>
-  <div style="position: relative; height: 400px; width: 100%;">
+  <div class="chart-container">
     <canvas id="puntosChart"></canvas>
   </div>
 
@@ -46,4 +46,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         .catch(err => console.error('Error al cargar seasons.json:', err));
     }
   </script>
+  <style>
+  .chart-container {
+    position: relative;
+    height: 400px;
+    width: 100%;
+  }
+  @media (max-width: 768px) {
+    .chart-container { height: 280px; }
+  }
+  </style>
 </BaseLayout>
