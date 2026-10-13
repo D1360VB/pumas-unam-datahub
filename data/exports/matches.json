@@ -1,5 +1,17 @@
 [
   {
+    "match_id": "20261012_UNAM_Pumas_vs_Cruz_Azul",
+    "date": "2026-10-12",
+    "season": "2026/2027",
+    "home_team": "UNAM Pumas",
+    "away_team": "Cruz Azul",
+    "home_goals": 3,
+    "away_goals": 3,
+    "result": "D",
+    "points": 1,
+    "goal_diff": 0
+  },
+  {
     "match_id": "20260927_UNAM_Pumas_vs_Atl._San_Luis",
     "date": "2026-09-27",
     "season": "2026/2027",
