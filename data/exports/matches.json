@@ -1,5 +1,17 @@
 [
   {
+    "match_id": "20261022_Santos_Laguna_vs_UNAM_Pumas",
+    "date": "2026-10-22",
+    "season": "2026/2027",
+    "home_team": "Santos Laguna",
+    "away_team": "UNAM Pumas",
+    "home_goals": 2,
+    "away_goals": 0,
+    "result": "L",
+    "points": 0,
+    "goal_diff": -2
+  },
+  {
     "match_id": "20261017_Atlante_vs_UNAM_Pumas",
     "date": "2026-10-17",
     "season": "2026/2027",
