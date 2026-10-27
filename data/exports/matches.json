@@ -1,5 +1,17 @@
 [
   {
+    "match_id": "20261025_UNAM_Pumas_vs_Tigres_UANL",
+    "date": "2026-10-25",
+    "season": "2026/2027",
+    "home_team": "UNAM Pumas",
+    "away_team": "Tigres UANL",
+    "home_goals": 1,
+    "away_goals": 1,
+    "result": "D",
+    "points": 1,
+    "goal_diff": 0
+  },
+  {
     "match_id": "20261022_Santos_Laguna_vs_UNAM_Pumas",
     "date": "2026-10-22",
     "season": "2026/2027",
