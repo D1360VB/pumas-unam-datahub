@@ -1,5 +1,17 @@
 [
   {
+    "match_id": "20261031_Puebla_vs_UNAM_Pumas",
+    "date": "2026-10-31",
+    "season": "2026/2027",
+    "home_team": "Puebla",
+    "away_team": "UNAM Pumas",
+    "home_goals": 1,
+    "away_goals": 2,
+    "result": "W",
+    "points": 3,
+    "goal_diff": 1
+  },
+  {
     "match_id": "20261025_UNAM_Pumas_vs_Tigres_UANL",
     "date": "2026-10-25",
     "season": "2026/2027",
