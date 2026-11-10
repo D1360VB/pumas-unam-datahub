@@ -32,6 +32,14 @@
     "perdidos": 4
   },
   {
+    "rival": "Club America",
+    "partidos": 43,
+    "puntos": 41,
+    "ganados": 9,
+    "empatados": 14,
+    "perdidos": 20
+  },
+  {
     "rival": "Toluca",
     "partidos": 30,
     "puntos": 40,
@@ -54,14 +62,6 @@
     "ganados": 11,
     "empatados": 7,
     "perdidos": 10
-  },
-  {
-    "rival": "Club America",
-    "partidos": 42,
-    "puntos": 40,
-    "ganados": 9,
-    "empatados": 13,
-    "perdidos": 20
   },
   {
     "rival": "Club Tijuana",

@@ -1,12 +1,12 @@
 [
   {
     "season": "2026/2027",
-    "partidos": 15,
-    "puntos": 20,
-    "goles_favor": 22,
-    "goles_contra": 24,
+    "partidos": 16,
+    "puntos": 21,
+    "goles_favor": 24,
+    "goles_contra": 26,
     "ganados": 5,
-    "empatados": 5,
+    "empatados": 6,
     "perdidos": 5
   },
   {

@@ -1,5 +1,17 @@
 [
   {
+    "match_id": "20261108_UNAM_Pumas_vs_Club_America",
+    "date": "2026-11-08",
+    "season": "2026/2027",
+    "home_team": "UNAM Pumas",
+    "away_team": "Club America",
+    "home_goals": 2,
+    "away_goals": 2,
+    "result": "D",
+    "points": 1,
+    "goal_diff": 0
+  },
+  {
     "match_id": "20261031_Puebla_vs_UNAM_Pumas",
     "date": "2026-10-31",
     "season": "2026/2027",
