@@ -1,5 +1,17 @@
 [
   {
+    "match_id": "20261122_UNAM_Pumas_vs_Monterrey",
+    "date": "2026-11-22",
+    "season": "2026/2027",
+    "home_team": "UNAM Pumas",
+    "away_team": "Monterrey",
+    "home_goals": 0,
+    "away_goals": 2,
+    "result": "L",
+    "points": 0,
+    "goal_diff": -2
+  },
+  {
     "match_id": "20261108_UNAM_Pumas_vs_Club_America",
     "date": "2026-11-08",
     "season": "2026/2027",
